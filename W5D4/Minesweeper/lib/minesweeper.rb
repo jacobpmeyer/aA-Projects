@@ -1,20 +1,21 @@
 require "colorize"
 require "byebug"
 require_relative "tile"
-require_relative "board"
+require_relative "board.rb"
 
 class Minesweeper
 
-  attr_accessor :grid
+  attr_accessor :board
 
   def self.new_game
     Minesweeper.new
   end
 
   def initialize(size = 9)
-    @grid = Board.new(size)
+    @size = size
+    @board = Board.new(size)
   end
-  
+
   def render
     self.board.render
   end
