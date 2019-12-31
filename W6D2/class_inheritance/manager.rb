@@ -1,0 +1,4 @@
+
+class Manager < Employee
+  
+end
