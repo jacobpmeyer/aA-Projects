@@ -1,10 +1,13 @@
-require 'singleton'
+require_relative 'stepable'
 require_relative "piece"
 
-class NullPiece < Piece
-  include Singleton 
-
+class King < Piece
+  include Stepable
   def initialize(color, board, pos)
     super(color, board, pos)
+  end
+
+  def symbol
+    :K
   end
 end
