@@ -82,13 +82,9 @@ class Cursor
     when :left, :right, :up, :down
       self.update_pos(MOVES[key])
       return nil
-    when :ctrl_c
-      Process.exit
     end
   end
 
   def update_pos(diff)
-    new_pos = [cursor_pos[0] + diff[0], cursor_pos[1] + diff[1]]
-    @cursor_pos = new_pos if self.board.valid_pos?(new_pos)
   end
 end

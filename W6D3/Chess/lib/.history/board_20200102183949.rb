@@ -1,6 +1,5 @@
 require "byebug"
 require_relative "piece"
-require 'colorize'
 
 class Board
   attr_reader :board
@@ -8,13 +7,6 @@ class Board
   def initialize
     @board = Array.new
     fill_board
-  end
-
-  def render
-    (0...@board.length).each { |i|
-      color = i < 2 ? :white : :light_black
-      puts @board[i].map { |pos| pos.to_s.colorize(color) }.join(" ")
-    }
   end
 
   def fill_board

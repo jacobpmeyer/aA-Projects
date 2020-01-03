@@ -1,6 +1,5 @@
 require "byebug"
 require_relative "piece"
-require 'colorize'
 
 class Board
   attr_reader :board
@@ -10,13 +9,6 @@ class Board
     fill_board
   end
 
-  def render
-    (0...@board.length).each { |i|
-      color = i < 2 ? :white : :light_black
-      puts @board[i].map { |pos| pos.to_s.colorize(color) }.join(" ")
-    }
-  end
-
   def fill_board
     @board.concat(Array.new(8) { |i| 
       Array.new(8) { |j| 
@@ -24,21 +16,18 @@ class Board
           NullPiece.instance
         else
           color = i < 2 ? :W : :B
-          if i == 1 || i == 6
-            Pawn.new(color, self, [i, j])
-          else
-            case j
-            when 7, 0
-              Rook.new(color, self, [i,j])
-            when 1, 6
-              Knight.new(color, self, [i,j])
-            when 2, 5
-              Bishop.new(color, self, [i,j])
-            when 3
-              King.new(color, self, [i,j])
-            when 4
-              Queen.new(color, self, [i,j])
-            end
+
+          case j
+          when 7, 0
+            Rook.new(color, self, [i,j])
+          when 1, 6
+            Knight.new(color, self, [i,j])
+          when 2, 5
+            Bishop.new(color, self, [i,j])
+          when 3
+            King.new(color, self, [i,j])
+          when 4
+            Queen.new(color, self, [i,j])
           end
         end
       } 

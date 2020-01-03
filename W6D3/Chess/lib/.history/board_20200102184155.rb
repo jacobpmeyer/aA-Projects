@@ -10,13 +10,6 @@ class Board
     fill_board
   end
 
-  def render
-    (0...@board.length).each { |i|
-      color = i < 2 ? :white : :light_black
-      puts @board[i].map { |pos| pos.to_s.colorize(color) }.join(" ")
-    }
-  end
-
   def fill_board
     @board.concat(Array.new(8) { |i| 
       Array.new(8) { |j| 

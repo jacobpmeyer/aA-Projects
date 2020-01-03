@@ -123,7 +123,7 @@ class Knight < Piece
   include Steppable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "N"
+    @symbol = :N
   end
 
   def move_diffs

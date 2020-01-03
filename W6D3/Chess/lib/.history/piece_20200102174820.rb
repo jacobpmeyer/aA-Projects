@@ -29,7 +29,7 @@ class Rook < Piece
   include Slideable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "R"
+    @symbol = :R
   end
 
   def move_dirs
@@ -41,7 +41,7 @@ class Bishop < Piece
   include Slideable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "B"
+    @symbol = :B
   end
 
   def move_dirs
@@ -53,7 +53,7 @@ class Queen < Piece
   include Slideable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "Q"
+    @symbol = :Q
   end
 end
 
@@ -61,7 +61,7 @@ class King < Piece
   include Steppable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "K"
+    @symbol = :K
   end
 
   def move_diffs
@@ -73,7 +73,7 @@ class Pawn < Piece
   include Steppable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "P"
+    @symbol = :P
   end
 
   def moves
@@ -123,7 +123,7 @@ class Knight < Piece
   include Steppable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "N"
+    @symbol = :N
   end
 
   def move_diffs

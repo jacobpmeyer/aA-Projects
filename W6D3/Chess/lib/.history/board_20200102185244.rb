@@ -11,10 +11,12 @@ class Board
   end
 
   def render
-    (0...@board.length).each { |i|
-      color = i < 2 ? :white : :light_black
-      puts @board[i].map { |pos| pos.to_s.colorize(color) }.join(" ")
-    }
+    @board.each do |row|
+      row.each do |pos|
+        color = pos.color == :W ? "white" : "light_black"
+        print pos
+      end
+    end
   end
 
   def fill_board

@@ -29,7 +29,7 @@ class Rook < Piece
   include Slideable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "R"
+    @symbol = :R
   end
 
   def move_dirs
@@ -41,7 +41,7 @@ class Bishop < Piece
   include Slideable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "B"
+    @symbol = :B
   end
 
   def move_dirs
@@ -53,7 +53,7 @@ class Queen < Piece
   include Slideable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "Q"
+    @symbol = :Q
   end
 end
 
@@ -61,7 +61,7 @@ class King < Piece
   include Steppable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "K"
+    @symbol = :K
   end
 
   def move_diffs
@@ -73,7 +73,7 @@ class Pawn < Piece
   include Steppable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "P"
+    @symbol = :P
   end
 
   def moves
@@ -84,19 +84,26 @@ class Pawn < Piece
 
     mvs2 = []
     first = mvs.shift
-    mvs2 << first if self.board[first].is_a?(NullPiece)
 
-    # unless self.board[mvs[0]].is_a?(NullPiece)
-    #   mvs.shift
-    # end
+
+    unless self.board[mvs[0]].is_a?(NullPiece)
+      mvs.shift
+    end
+
+    case mvs.length
+
+    end
+
+    debugger
+
     enemy = Proc.new { |pos| self.board[pos].color != self.color && 
       !self.board[pos].is_a?(NullPiece) }
 
-    mvs.each { |mv| 
-      mvs2 << mv if enemy.call(mv)
+    mvs[-2..-1].each { |mv| 
+      mvs.delete(mv) unless enemy.call(mv)
     }
 
-    mvs2
+    mvs
   end
 
   def move_diffs
@@ -123,7 +130,7 @@ class Knight < Piece
   include Steppable
   def initialize(color, board, pos)
     super(color, board, pos)
-    @symbol = "N"
+    @symbol = :N
   end
 
   def move_diffs
