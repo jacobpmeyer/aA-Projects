@@ -19,8 +19,22 @@ class Array
   def my_transpose
     self.transpose
   end
-
-  def stock_picker(arr)
-    
-  end
 end
+
+def stock_picker(arr)
+    profit = 0
+    new_arr = nil
+    arr.each_with_index do |ele1, i|
+      arr.each_with_index do |ele2, j|
+        if j > i
+          new_profit = ele2 - ele1
+          if new_profit > profit
+            profit = new_profit 
+            new_arr = [i, j]
+          end
+        end
+      end
+    end
+    new_arr
+end
+
