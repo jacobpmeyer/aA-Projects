@@ -29,26 +29,37 @@ end
 # largest_contiguous_subsum
 # phase 1
 
-def largest_contiguous_subsum(list)
+def largest_contiguous_subsum1(list)
   arr = []
-  list.each_with_index do |el1, i|
-    list.each_with_index do |el2, j|
-       if j > i
-        arr << list[i..j]
-       end
-    end
+  (0...list.length).each do |i|
+    (i...list.length).each { |j| arr << list[i..j] }
   end
-  largest_sum = 0
+  largest_sum = arr.first.sum
   arr.each do |sub_arr|
     largest_sum = sub_arr.sum if sub_arr.sum > largest_sum
-    # p sub_arr
   end
   largest_sum
 end
 # Time complexity => O(n^2)
 
-# list = [5, 3, -7]
-# p largest_contiguous_subsum(list) # => 8
+def largest_contiguous_subsum2(list)
+  sum = 0 # keeps track of current sum
+  largest_sum = list.first # evaluates to the largest sum
+  list.each do |ele|
+    sum += ele 
+    largest_sum = sum if sum > largest_sum
+    sum = 0 if sum < 0
+  end
+  largest_sum
+end
+# Time complexity => O(n)
+
+# examples
+list = [5, 3, -7]
+p largest_contiguous_subsum1(list) # => 8
 
 # list = [2, 3, -6, 7, -6, 7]
-# p largest_contiguous_subsum(list) # => 8 (from [7, -6, 7])
+# p largest_contiguous_subsum2(list) # => 8 (from [7, -6, 7])
+
+# list = [-5, -1, -3]
+# p largest_contiguous_subsum2(list) # => -1 (from [-1])
