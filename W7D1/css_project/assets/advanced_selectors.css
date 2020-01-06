@@ -73,7 +73,6 @@ ol li:nth-child(odd) {
   border-top: 1px solid black;
 }
 
-
 input[type = 'radio']:hover {
   background-color: blue;
   background-position: 50px 100px;
