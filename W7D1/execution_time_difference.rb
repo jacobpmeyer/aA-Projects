@@ -55,8 +55,8 @@ end
 # Time complexity => O(n)
 
 # examples
-list = [5, 3, -7]
-p largest_contiguous_subsum1(list) # => 8
+# list = [5, 3, -7]
+# p largest_contiguous_subsum1(list) # => 8
 
 # list = [2, 3, -6, 7, -6, 7]
 # p largest_contiguous_subsum2(list) # => 8 (from [7, -6, 7])
