@@ -102,13 +102,12 @@ aside {
 }
 
 #directions{
-  marigin: 15px 15px;
+  margin: 15px 15px;
 }
 
 input {
   display: block;
 }
-
 
 select {
   margin: 15px;
