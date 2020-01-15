@@ -1,0 +1,19 @@
+html, head, title, script, body, header, img, nav, ul, li, aside, h2, section, 
+h1, figure, p, figcaption, ol, form, label, input, textarea, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit
+}
+
+li, ol, ul {
+    list-style: none;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img {
+    width: inherit;
+}

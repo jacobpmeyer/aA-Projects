@@ -64,7 +64,8 @@ INSERT INTO
   questions (title, body, user_id)
 VALUES
   ('Year', 'What year is it?', 1 ),
-  ('Coke or Pepsi', 'Do you prefer Coke or Pepsi?', 2);
+  ('Coke or Pepsi', 'Do you prefer Coke or Pepsi?', 2),
+  ('Which distro', 'which distro is best?', 1);
 
 INSERT INTO
   question_follows (user_id, question_id)
