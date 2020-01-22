@@ -1,7 +1,22 @@
 class UsersController < ApplicationController
   def index
-    user = User.all
-    render json: user
+    # found_user = User.find_by(username: user)
+    # if found_user
+    #   render json: found_user
+    # else
+    #   users = User.all
+    #   render json: users
+    # end
+    user = params[:username] 
+    
+    found_user = User.where('username LIKE ?', "%#{user}%")
+    
+    if !found_user.empty?
+      render json: found_user
+    else
+      users = User.all
+      render json: users
+    end
   end
 
   def show
