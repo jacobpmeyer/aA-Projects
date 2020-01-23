@@ -1,4 +1,11 @@
-class ArtworkShareController < ApplicationController
+class ArtworkSharesController < ApplicationController
+
+    # def index 
+    #   # debugger
+      # artwork_share = ArtworkShare.find_by(viewer_id: params[:user_id])
+
+      # render json: artwork_share
+    # end
 
     def create
         artwork_share = ArtworkShare.new(artwork_share_params)
@@ -16,6 +23,18 @@ class ArtworkShareController < ApplicationController
         artwork_share.destroy
         render json: artwork_share
     end
+
+    def favorite
+      # debugger
+        artwork_share = ArtworkShare.find_by(id: params[:id])
+        if artwork_share.favorite 
+            artwork_share.favorite = false 
+        else
+            artwork_share.favorite = true 
+        end
+
+        render json: artwork_share
+  end
 
     private
     def artwork_share_params

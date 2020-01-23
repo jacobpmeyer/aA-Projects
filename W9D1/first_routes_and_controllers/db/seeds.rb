@@ -16,14 +16,18 @@ ActiveRecord::Base.transaction do
 
   user1 = User.create!(username: 'john')
   user2 = User.create!(username: 'sally')
+  user3 = User.create!(username: 'johny')
+  user4 = User.create!(username: 'jonathan')
   
   art1 = Artwork.create!(artist_id: user1.id, title: 'banana', img_url: 'www.banana.com')
-  art2 = Artwork.create!(artist_id: user2.id, title: 'potato', img_url: 'www.potato.com')
+  art2 = Artwork.create!(artist_id: user1.id, favorite: user1.id, title: 'potato', img_url: 'www.potato.com')
+  art3 = Artwork.create!(artist_id: user2.id, favorite: user2.id, title: 'tomato', img_url: 'www.tomato.com')
+  art4 = Artwork.create!(artist_id: user2.id, title: 'apple', img_url: 'www.apple.com')
   
-  share1 = ArtworkShare.create!(artwork_id: art1.id, viewer_id: user2.id)
-  share2 = ArtworkShare.create!(artwork_id: art1.id, viewer_id: user1.id)
-  share3 = ArtworkShare.create!(artwork_id: art2.id, viewer_id: user2.id)
-  share4 = ArtworkShare.create!(artwork_id: art2.id, viewer_id: user1.id)
+  share1 = ArtworkShare.create!(artwork_id: art1.id, favorite: user3.id, viewer_id: user3.id)
+  share2 = ArtworkShare.create!(artwork_id: art2.id, favorite: user4.id, viewer_id: user4.id)
+  share3 = ArtworkShare.create!(artwork_id: art3.id, viewer_id: user3.id)
+  share4 = ArtworkShare.create!(artwork_id: art4.id, viewer_id: user4.id)
 
   com1 = Comment.create!(artwork_id: art1.id, user_id: user1.id, body: 'comment_1')
   com2 = Comment.create!(artwork_id: art2.id, user_id: user2.id, body: 'comment_2')
