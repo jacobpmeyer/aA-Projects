@@ -1185,3 +1185,10 @@ NoMethodError - undefined method `keys' for #<Cat:0x0000558b9bcc32e8>:
   app/controllers/cats_controller.rb:37:in `edit'
 
 Started POST "/__better_errors/1ef185d5f4775bbf/variables" for ::1 at 2020-01-23 18:32:01 -0600
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" ORDER BY "cats"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" ORDER BY "cats"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" ORDER BY "cats"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" ORDER BY "cats"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" ORDER BY "cats"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" ORDER BY "cats"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" ORDER BY "cats"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]

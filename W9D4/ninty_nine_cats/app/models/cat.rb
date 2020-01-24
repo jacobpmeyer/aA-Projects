@@ -14,7 +14,7 @@ class Cat < ApplicationRecord
     message: "%{value} is not a valid sex" }
   
   def age 
-    @birth_date.time_ago_in_words(Time.now)
+    distance_of_time_in_words_to_now(birth_date)
   end 
 
   def color_options
