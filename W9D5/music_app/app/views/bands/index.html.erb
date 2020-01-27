@@ -1,7 +1,11 @@
 <h2>All the bands</h2>
 
+<% auth_token %>
+
 <% @bands.each do |band| %>
   <ul>
     <li><a href="<%= band_url(band.id) %>"><%= band.name %></a></li>
   </ul>
 <% end %>
+
+<h3><a href="<%= new_band_url %>">Form a new band!</a></h3>

@@ -1,3 +1,16 @@
 <h3>Edit the band!</h3>
 
 <%= render "form", band: @band %>
+
+<br>
+<br>
+<form action="<%= band_url %>" method="post">
+  <%= auth_token %>
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="submit" value="Delete this band">
+
+
+  <br>
+  <a href="<%= bands_url %>">Back to index</a>
+</form>
