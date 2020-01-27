@@ -1157,3 +1157,976 @@ Started GET "/users/1" for ::1 at 2020-01-27 15:33:54 -0600
 AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
 
 Started POST "/__better_errors/c5557c776a480e9f/variables" for ::1 at 2020-01-27 15:33:54 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4505726345591715405)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBands (20200127213616)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "bands" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200127213616_create_bands.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200127213616"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4505726345591715405)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-01-27 15:50:54 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bands" for ::1 at 2020-01-27 15:50:59 -0600
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  Rendered bands/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/bands/index.html.erb:10:in `'
+  app/controllers/bands_controller.rb:4:in `index'
+
+Started POST "/__better_errors/c790504afa28e1f7/variables" for ::1 at 2020-01-27 15:50:59 -0600
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT  "bands".* FROM "bands" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Started GET "/bands" for ::1 at 2020-01-27 15:51:23 -0600
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:3
+  Rendered bands/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 134ms (Views: 132.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bands" for ::1 at 2020-01-27 16:07:13 -0600
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:3
+  Rendered bands/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 31ms (Views: 24.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/bands/new" for ::1 at 2020-01-27 16:07:27 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.2ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/9d1e490371f69747/variables" for ::1 at 2020-01-27 16:07:27 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:03 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/560e00ef152d63ea/variables" for ::1 at 2020-01-27 16:08:03 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:06 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/a442b162f82caf1e/variables" for ::1 at 2020-01-27 16:08:06 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:06 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/7413fb994ad77799/variables" for ::1 at 2020-01-27 16:08:06 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:06 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/94ea1c5d51ca1aa4/variables" for ::1 at 2020-01-27 16:08:06 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:07 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/e3341b05db6c05db/variables" for ::1 at 2020-01-27 16:08:07 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:07 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/02f62574175b1b15/variables" for ::1 at 2020-01-27 16:08:07 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:07 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/5845f7282fb68b40/variables" for ::1 at 2020-01-27 16:08:07 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:07 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/eff8cf6ddf6c53f1/variables" for ::1 at 2020-01-27 16:08:07 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:08 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/668419adf2f2b66e/variables" for ::1 at 2020-01-27 16:08:08 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:08 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/dd2413a63018b5b4/variables" for ::1 at 2020-01-27 16:08:08 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:08 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/9765487b0e57eac9/variables" for ::1 at 2020-01-27 16:08:08 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:08 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/96359590a0aebb93/variables" for ::1 at 2020-01-27 16:08:09 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:30 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 4.4ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( render "form" band: @band );
+...                           ^~~~:
+  app/views/bands/new.html.erb:3:in `'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/27d32dae509875f4/variables" for ::1 at 2020-01-27 16:08:30 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:08:48 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.1ms)
+  Rendered bands/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317481226140'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317481244940'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/0da0be7ed4bcca9c/variables" for ::1 at 2020-01-27 16:08:48 -0600
+Started POST "/__better_errors/0da0be7ed4bcca9c/variables" for ::1 at 2020-01-27 16:10:07 -0600
+Started POST "/__better_errors/0da0be7ed4bcca9c/variables" for ::1 at 2020-01-27 16:10:07 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:10:21 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (3.9ms)
+  Rendered bands/new.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317483204920'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317483330280'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/52583441792781da/variables" for ::1 at 2020-01-27 16:10:21 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:11:18 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.0ms)
+  Rendered bands/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317481564020'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317482442860'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/39aeac763405bbcd/variables" for ::1 at 2020-01-27 16:11:19 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:11:30 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.5ms)
+  Rendered bands/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317478668900'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317478609520'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/cd0dab6ad385e923/variables" for ::1 at 2020-01-27 16:11:30 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:11:31 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (3.6ms)
+  Rendered bands/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317475905440'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317476032000'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/add15025ce42af34/variables" for ::1 at 2020-01-27 16:11:31 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:11:33 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.5ms)
+  Rendered bands/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317479176520'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317479221780'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/71f5c2e68e1f60f3/variables" for ::1 at 2020-01-27 16:11:33 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:30 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.4ms)
+  Rendered bands/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.5ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_47031072631740'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_47031072812280'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/c3a28fde6d0ff66e/variables" for ::1 at 2020-01-27 16:12:30 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:41 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.7ms)
+  Rendered bands/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317482766020'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317482826340'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/b875a35cbd48f323/variables" for ::1 at 2020-01-27 16:12:41 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:43 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.9ms)
+  Rendered bands/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__525278858185796429_70317478841160'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__774886958777811061_70317478852320'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/efefdb68b9e0b21e/variables" for ::1 at 2020-01-27 16:12:43 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:51 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.1ms)
+  Rendered bands/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.8ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397435872800'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397435844260'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/2fff6c2708148b89/variables" for ::1 at 2020-01-27 16:12:51 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:52 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (4.6ms)
+  Rendered bands/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397434595440'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397434886680'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/e1900c5e9dbc0cdb/variables" for ::1 at 2020-01-27 16:12:52 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:52 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.6ms)
+  Rendered bands/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397435582740'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397435200020'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/176686cc7140b5ea/variables" for ::1 at 2020-01-27 16:12:53 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:53 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.8ms)
+  Rendered bands/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397438593280'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397438825680'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/e9dfd1d4f13e88c7/variables" for ::1 at 2020-01-27 16:12:53 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:53 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.6ms)
+  Rendered bands/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397434753760'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397434888960'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/184778569d0d7333/variables" for ::1 at 2020-01-27 16:12:53 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:53 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.6ms)
+  Rendered bands/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843287701140'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843287830360'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/403b16f8d3d95292/variables" for ::1 at 2020-01-27 16:12:53 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:54 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.1ms)
+  Rendered bands/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843285316660'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843285394460'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/1c7fd33a2d4127c6/variables" for ::1 at 2020-01-27 16:12:54 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:54 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.6ms)
+  Rendered bands/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843282379200'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843282410460'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/0bac141893fb65bf/variables" for ::1 at 2020-01-27 16:12:54 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:54 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.7ms)
+  Rendered bands/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397435786420'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397435935600'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/5962ca306fbc31cd/variables" for ::1 at 2020-01-27 16:12:54 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:55 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.0ms)
+  Rendered bands/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843286595140'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843286796660'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/e3ecf6208bf291db/variables" for ::1 at 2020-01-27 16:12:55 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:55 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (3.7ms)
+  Rendered bands/new.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843282926180'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843282964440'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/8cb6752ea298cafc/variables" for ::1 at 2020-01-27 16:12:55 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:55 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.3ms)
+  Rendered bands/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397430092180'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397430220740'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/2f7f5a61d538aaa4/variables" for ::1 at 2020-01-27 16:12:55 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:55 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.6ms)
+  Rendered bands/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843285016680'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843285047100'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/c4fdadcd8f211ad2/variables" for ::1 at 2020-01-27 16:12:56 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:56 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.9ms)
+  Rendered bands/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397436868500'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397437168220'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/73093d225e387d39/variables" for ::1 at 2020-01-27 16:12:56 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:56 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.6ms)
+  Rendered bands/new.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843285184080'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843285287660'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/ca94f85bce6f57ea/variables" for ::1 at 2020-01-27 16:12:56 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:56 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.4ms)
+  Rendered bands/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397434305220'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397434633240'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/557dfa542c320a75/variables" for ::1 at 2020-01-27 16:12:56 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:56 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (4.8ms)
+  Rendered bands/new.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843283057500'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843283120500'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/a84b931dd620c6c5/variables" for ::1 at 2020-01-27 16:12:57 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:57 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.2ms)
+  Rendered bands/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843286018200'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843286038140'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/81c3f5fc06b90c4e/variables" for ::1 at 2020-01-27 16:12:57 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:57 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.0ms)
+  Rendered bands/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843286985640'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843287054860'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/0d0bf83cb2228d3d/variables" for ::1 at 2020-01-27 16:12:57 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:58 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.6ms)
+  Rendered bands/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843285823040'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843285842120'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/7bf6508f5065187f/variables" for ::1 at 2020-01-27 16:12:58 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:58 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (4.5ms)
+  Rendered bands/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397442487000'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397442565900'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/5a002c98a633046b/variables" for ::1 at 2020-01-27 16:12:58 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:58 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.2ms)
+  Rendered bands/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397437163380'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397437035360'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/df2630e1fbaac630/variables" for ::1 at 2020-01-27 16:12:58 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:59 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.1ms)
+  Rendered bands/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843288025660'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843288200560'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/9ed701d14a1d8f9e/variables" for ::1 at 2020-01-27 16:12:59 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:59 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.9ms)
+  Rendered bands/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843285418800'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843285475420'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/41c26a51ba70fcde/variables" for ::1 at 2020-01-27 16:12:59 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:59 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.7ms)
+  Rendered bands/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843282386200'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843282467340'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/9a04414539bc7a84/variables" for ::1 at 2020-01-27 16:12:59 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:12:59 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.6ms)
+  Rendered bands/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397435873940'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397436152700'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/92b99d8d3a73377a/variables" for ::1 at 2020-01-27 16:12:59 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:00 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.7ms)
+  Rendered bands/new.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843287205380'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843287225080'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/8bad69da8ce5b7d1/variables" for ::1 at 2020-01-27 16:13:00 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:00 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.8ms)
+  Rendered bands/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843283150120'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843283215740'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/e3b4d8d1aef63a23/variables" for ::1 at 2020-01-27 16:13:00 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:00 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (4.9ms)
+  Rendered bands/new.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397434756320'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397434913660'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/305eb453822bcdc9/variables" for ::1 at 2020-01-27 16:13:01 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:01 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.1ms)
+  Rendered bands/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843285484920'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843285591340'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/45a3bb2524afd142/variables" for ::1 at 2020-01-27 16:13:01 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:02 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (3.1ms)
+  Rendered bands/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397437767120'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397437920100'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/b00c68a05fd615b9/variables" for ::1 at 2020-01-27 16:13:02 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:02 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.6ms)
+  Rendered bands/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843285790660'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843285987620'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/07bd95ea7cdd7c7e/variables" for ::1 at 2020-01-27 16:13:02 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:02 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.7ms)
+  Rendered bands/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397435889500'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397436306820'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/3597390c0f2efff9/variables" for ::1 at 2020-01-27 16:13:02 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:03 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.0ms)
+  Rendered bands/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843283806620'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843283887900'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/939b070db4039984/variables" for ::1 at 2020-01-27 16:13:03 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:03 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.5ms)
+  Rendered bands/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843287584080'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843287673420'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/389f555f62c63b5b/variables" for ::1 at 2020-01-27 16:13:03 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:03 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (1.4ms)
+  Rendered bands/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_47397442851760'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_47397442898560'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/bb77878d4914d681/variables" for ::1 at 2020-01-27 16:13:03 -0600
+Started GET "/bands/new" for ::1 at 2020-01-27 16:13:04 -0600
+Processing by BandsController#new as HTML
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/_form.html.erb (2.1ms)
+  Rendered bands/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"bands"}, missing required keys: [:id]:
+  app/views/bands/_form.html.erb:1:in `_app_views_bands__form_html_erb__1156982693312169583_69843284013640'
+  app/views/bands/new.html.erb:3:in `_app_views_bands_new_html_erb__2124048045394207890_69843283843500'
+  app/controllers/bands_controller.rb:9:in `new'
+
+Started POST "/__better_errors/9073f7230e70b209/variables" for ::1 at 2020-01-27 16:13:04 -0600
