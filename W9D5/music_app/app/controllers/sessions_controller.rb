@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     )
 
     if user
-      session[:session_token] = user.reset_session_token!
+      log_in_user!(user)
       redirect_to user_url(user.id)
     else
       flash.now[:errors] = "Wrong email/password combination"

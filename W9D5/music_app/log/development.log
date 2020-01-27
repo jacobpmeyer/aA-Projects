@@ -31,3 +31,1129 @@ Migrating to CreateUsers (20200127181228)
   ↳ bin/rails:9
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-01-27 14:37:49 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-01-27 14:39:01 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user" for ::1 at 2020-01-27 14:39:07 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/session/new" for ::1 at 2020-01-27 14:39:12 -0600
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template sessions/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views"
+:
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/f683b29167c4cfcd/variables" for ::1 at 2020-01-27 14:39:12 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:49:35 -0600
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template sessions/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views"
+:
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/6a3801d8118c93f7/variables" for ::1 at 2020-01-27 14:49:35 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:28 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/c923a2046a2d2f7a/variables" for ::1 at 2020-01-27 14:51:28 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:31 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/7e71002bb1f36792/variables" for ::1 at 2020-01-27 14:51:31 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:31 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/30d22c31d33f96f4/variables" for ::1 at 2020-01-27 14:51:31 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:31 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/d1791522da17a110/variables" for ::1 at 2020-01-27 14:51:32 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:32 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/ef9ac90a2492ce21/variables" for ::1 at 2020-01-27 14:51:32 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:32 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/3d7891aa3b4176c7/variables" for ::1 at 2020-01-27 14:51:32 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:32 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/04ad57d5a7ff4abe/variables" for ::1 at 2020-01-27 14:51:32 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:32 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/db73da57a82b5521/variables" for ::1 at 2020-01-27 14:51:33 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:33 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/37b6757dbdf429e9/variables" for ::1 at 2020-01-27 14:51:33 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:33 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/502443762865704a/variables" for ::1 at 2020-01-27 14:51:33 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:33 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/51e0dbe0731bc6a1/variables" for ::1 at 2020-01-27 14:51:33 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:34 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/9826382415666217/variables" for ::1 at 2020-01-27 14:51:34 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:34 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/bb3a93c27ff8d2b6/variables" for ::1 at 2020-01-27 14:51:34 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:34 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/bde3a34d7df4d5b3/variables" for ::1 at 2020-01-27 14:51:34 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:34 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/6abec172686812b6/variables" for ::1 at 2020-01-27 14:51:34 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:35 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/821a9c862b030a04/variables" for ::1 at 2020-01-27 14:51:35 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:35 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/95e58d7b8dcb1e1b/variables" for ::1 at 2020-01-27 14:51:35 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:35 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/31c9d23e7e3fda40/variables" for ::1 at 2020-01-27 14:51:35 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:35 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/195db9a63c6801d1/variables" for ::1 at 2020-01-27 14:51:36 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:36 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/15be68dd20855dbc/variables" for ::1 at 2020-01-27 14:51:36 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:36 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/8a51790cad555913/variables" for ::1 at 2020-01-27 14:51:36 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:36 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/c857cce3537d5d20/variables" for ::1 at 2020-01-27 14:51:36 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:51:37 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+          ^~~~~~
+/home/jacobmeyer/app_academy/aa_projects/W9D5/music_app/app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/layouts/application.html.erb:21:in `'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/b54c2affa87d4ddf/variables" for ::1 at 2020-01-27 14:51:37 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:52:12 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 563ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `current_user' for #<#<Class:0x00007f959408a5d0>:0x000055d27944a290>
+Did you mean?  current_page?:
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___1065756853090805836_47181232925580'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/5f4315fc7e684015/variables" for ::1 at 2020-01-27 14:52:12 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:53:07 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1065756853090805836_70140428396280'
+  app/controllers/sessions_controller.rb:4:in `new'
+
+Started POST "/__better_errors/0388496e8d1dd649/variables" for ::1 at 2020-01-27 14:53:07 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 14:53:38 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2020-01-27 14:54:01 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-27 15:06:10 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-01-27 15:06:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-01-27 15:06:24 -0600
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/37ea91d515a17cbb/variables" for ::1 at 2020-01-27 15:06:24 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:06:29 -0600
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - You need to supply at least one validation:
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/b4479ef305718ee1/variables" for ::1 at 2020-01-27 15:06:29 -0600
+Started GET "/session/new" for ::1 at 2020-01-27 15:06:47 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for ::1 at 2020-01-27 15:06:51 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-01-27 15:06:53 -0600
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - You need to supply at least one validation:
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/db3e8d60f03341b4/variables" for ::1 at 2020-01-27 15:06:53 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:45 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/a432d04caf9fa54a/variables" for ::1 at 2020-01-27 15:15:45 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:46 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/8a13a7cdd6d92409/variables" for ::1 at 2020-01-27 15:15:46 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:46 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/8136ad96eead7247/variables" for ::1 at 2020-01-27 15:15:47 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:47 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/6c227a967ce8c525/variables" for ::1 at 2020-01-27 15:15:47 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:47 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/5a0c633fe89087f1/variables" for ::1 at 2020-01-27 15:15:48 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:48 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/b00700a0548a81c1/variables" for ::1 at 2020-01-27 15:15:48 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:48 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/7e2da37357b2da53/variables" for ::1 at 2020-01-27 15:15:48 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:49 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/b3899787ff6f9dd0/variables" for ::1 at 2020-01-27 15:15:49 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:49 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/16f9f3ebf494dce5/variables" for ::1 at 2020-01-27 15:15:49 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:15:49 -0600
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/users_controller.rb:13:in `'
+
+Started POST "/__better_errors/0e8427dfab959309/variables" for ::1 at 2020-01-27 15:15:50 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:16:40 -0600
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - You need to supply at least one validation:
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/5ae17a0a078de2b9/variables" for ::1 at 2020-01-27 15:16:41 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:17:10 -0600
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '}', expecting =>
+...{ "Password can not be blank" }
+...                              ^:
+  app/models/user.rb:5:in `'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/8476d4e3e1b34387/variables" for ::1 at 2020-01-27 15:17:11 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:17:40 -0600
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant User::LimitValidator:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/83fc434366fb2eb6/variables" for ::1 at 2020-01-27 15:17:40 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:17:41 -0600
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant User::LimitValidator:
+  app/models/user.rb:6:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `new'
+
+Started POST "/__better_errors/bdbfeb85551013fa/variables" for ::1 at 2020-01-27 15:17:42 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:18:45 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 12.9ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/users/new" for ::1 at 2020-01-27 15:19:00 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users/new" for ::1 at 2020-01-27 15:21:05 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users/new" for ::1 at 2020-01-27 15:21:15 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users/new" for ::1 at 2020-01-27 15:23:01 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users/new" for ::1 at 2020-01-27 15:23:06 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/users/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/new" for ::1 at 2020-01-27 15:23:33 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 153ms (Views: 137.9ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:23:47 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"hdWWNqhnrHg6bqxppPqMgnwGw1lCljsIw2Zywuc3EibvNi0FhZbGt5ZnVE1UzdE9Qjp/U97hz/j4CA68zPDFqg==", "user"=>{":email"=>"f@f.com", ":password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user_params' for #<UsersController:0x00007fbfac059470>
+Did you mean?  user_path:
+  app/controllers/users_controller.rb:8:in `create'
+
+Started POST "/__better_errors/e9017646a713a37d/variables" for ::1 at 2020-01-27 15:23:48 -0600
+Started GET "/users/new" for ::1 at 2020-01-27 15:25:16 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:25:25 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ysFsz7hW9+OV6XFTa3/RvU5T3EJVIwebCdOQXih80WGgItf8laedLDngiXebSIwCcG9gSMlU82syvewgA7sG7Q==", "user"=>{":email"=>"f@f.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/f864b60f4b310c39/variables" for ::1 at 2020-01-27 15:25:25 -0600
+Started POST "/users" for ::1 at 2020-01-27 15:25:47 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ysFsz7hW9+OV6XFTa3/RvU5T3EJVIwebCdOQXih80WGgItf8laedLDngiXebSIwCcG9gSMlU82syvewgA7sG7Q==", "user"=>{":email"=>"f@f.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 2.9ms)
+
+
+
+NameError - undefined local variable or method `user' for #<UsersController:0x00007fbfb5b43c38>
+Did you mean?  @user:
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/0b9b21606ee4a338/variables" for ::1 at 2020-01-27 15:25:47 -0600
+Started POST "/users" for ::1 at 2020-01-27 15:25:59 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ysFsz7hW9+OV6XFTa3/RvU5T3EJVIwebCdOQXih80WGgItf8laedLDngiXebSIwCcG9gSMlU82syvewgA7sG7Q==", "user"=>{":email"=>"f@f.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 24.8ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:26:16 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"kMC+ZLxkuoldWJldXBkKQHUntPa5cXE/lgW5TUKbypn6IwVXkZXQRvFRYXmsLlf/SxsI/CUGhc+ta8UzaVwdFQ==", "user"=>{":email"=>"f@f.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 18.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:26:34 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"jTW++F7rYg6GqbCo7eZM+xXV1IwMkf78qckrnrgVX87n1gXLcxoIwSqgSIwd0RFEK+lohpDmCgySp1fgk9KIQg==", "user"=>{":email"=>"james@james.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:27:34 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"yV5b9k/dXhRu1ZMQ3X4XQnh91sYiHsoxMWI4KxwOoPujveDFYiw028LcazQtSUr9RkFqzL5pPsEKDERVN8l3dw==", "user"=>{":email"=>"james@james.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 13.9ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:30:02 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnEhOmt99zX0n+W8P9jAa+8mLsNHUOCK+X4ASQ8KiglQkpoJRoyd+liWHZjP753U0RqSydsnFHrCEHw3JM1dhQ==", "user"=>{":email"=>"j@j.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.5ms)
+
+
+
+RuntimeError - :
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/c7cef29cac1ddabc/variables" for ::1 at 2020-01-27 15:30:02 -0600
+Started POST "/__better_errors/c7cef29cac1ddabc/eval" for ::1 at 2020-01-27 15:30:08 -0600
+Started POST "/__better_errors/c7cef29cac1ddabc/eval" for ::1 at 2020-01-27 15:30:45 -0600
+Unpermitted parameters: ::email, ::password
+Started POST "/users" for ::1 at 2020-01-27 15:32:09 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnEhOmt99zX0n+W8P9jAa+8mLsNHUOCK+X4ASQ8KiglQkpoJRoyd+liWHZjP753U0RqSydsnFHrCEHw3JM1dhQ==", "user"=>{":email"=>"j@j.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+RuntimeError - :
+  app/controllers/users_controller.rb:9:in `create'
+
+Started POST "/__better_errors/f07433b9c9be4553/variables" for ::1 at 2020-01-27 15:32:09 -0600
+Started POST "/users" for ::1 at 2020-01-27 15:32:34 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"OnEhOmt99zX0n+W8P9jAa+8mLsNHUOCK+X4ASQ8KiglQkpoJRoyd+liWHZjP753U0RqSydsnFHrCEHw3JM1dhQ==", "user"=>{":email"=>"j@j.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 12.1ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:32:44 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"LbCptpj6SZlsvt0Imceq4OkCXhv+kAZsZvWn5lHYhR1HUxKFtQsjVsC3JSxp8Pdf1z7iEWLn8pxdm9uYeh9SkQ==", "user"=>{":email"=>"j@j.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:33:06 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"6nV+JLZkpkXCnKjgY0BvBNfcPK/kw/dPKMyAQ4/8sUGAlsUXm5XMim6VUMSTdzK76eCApXi0A78Tovw9pDtmzQ==", "user"=>{":email"=>"hello@hello.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 143ms (Views: 123.0ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:33:33 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"LlvXTnMByF/GOBOpXXAjQjz+lH0artbLh+Oz8t5j4OREuGx9XvCikGox642tR379AsIod4bZIju8jc+M9aQ3aA==", "user"=>{":email"=>"hunter@hunter.com", ":password"=>"[FILTERED]"}}
+Unpermitted parameters: ::email, ::password
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2020-01-27 15:33:53 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jacobmeyer/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"EzjchCxkRo4x9MvpP2BmlzhdCxltCRChcBYpdYz0XVB522e3AZUsQZ39M83PVzsoBmG3E/F+5FFLeFULpzOK3A==", "user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@a.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "a@a.com"], ["password_digest", "$2a$12$hq5h5ezOmp5mCaDEW2mre.drSs3A.EFPkEexST9.X9osxxFf32Cmm"], ["session_token", "P5-YQUZMTv6OWFT2zf266g"], ["created_at", "2020-01-27 21:33:54.280377"], ["updated_at", "2020-01-27 21:33:54.280377"]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 283ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/users/1" for ::1 at 2020-01-27 15:33:54 -0600
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started POST "/__better_errors/c5557c776a480e9f/variables" for ::1 at 2020-01-27 15:33:54 -0600
