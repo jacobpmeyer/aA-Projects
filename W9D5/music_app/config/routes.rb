@@ -3,5 +3,8 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:create, :new, :show]
-  resources :bands
+  resources :bands do
+    resources :albums, only: [:index, :new]
+  end
+  resources :albums, only: [:create, :update, :show, :destroy, :edit]
 end
