@@ -3,9 +3,7 @@
 .content {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
   background: #fff;
-  width: 900px;
   border: 1px solid #ccc;
   border-top: 0;
 }
@@ -22,4 +20,10 @@
   width: 620px;
   min-height: 200px;
   padding: 20px;
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 900px;
 }

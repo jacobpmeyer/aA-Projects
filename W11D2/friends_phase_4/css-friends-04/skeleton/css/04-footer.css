@@ -1,1 +1,30 @@
 /* PHASE 4: Footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    min-height: 70px;
+    align-items: center;
+    color: #aaa;
+    background:white;
+    border-radius: 0 0 10px 10px;
+    border-top: 0;
+}
+
+.copywright{
+    padding: 15px;
+}
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+.footer-nav li {
+    padding: 10px;
+}
+
+.footer-nav li a:hover{
+    color: black
+}
