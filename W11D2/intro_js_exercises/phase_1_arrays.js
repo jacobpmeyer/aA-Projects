@@ -11,15 +11,15 @@
 // }
 
 // [1, 2, 3, 3].myUniq();
-debugger;
-const sayHello = function() {
-  debugger;
-  let s = "test"
-  const r = "stop"
-  console.log("hello");
-}
+// debugger;
+// const sayHello = function() {
+//   debugger;
+//   let s = "test"
+//   const r = "stop"
+//   console.log("hello");
+// }
 
-sayHello();
+// sayHello();
 
 // Array.prototype.twoSum = function(){
 //     for (let i = 0; i < this.length - 1; i++) {
@@ -101,17 +101,41 @@ sayHello();
 
 // console.log(x)
 
-Array.prototype.bubbleSort = function() {
-    sorted = false
-    while (!sorted) {
-        sorted = true
-        for (let i = 0; i < this.length -1; i++) {
-            if (this[i] > this[i +1]){
-                el = this[i]
-                el2 = this[i + 1]
-                el, el2 = el2, el
-                sorted = false
-            }
-        }
-    }
-}
+// Array.prototype.bubbleSort = function() {
+//     sorted = false
+//     while (!sorted) {
+//         sorted = true
+//         for (let i = 0; i < this.length -1; i++) {
+//             if (this[i] > this[i +1]){
+//                 el = this[i]
+//                 el2 = this[i + 1]
+//                 el, el2 = el2, el
+//                 sorted = false
+//             }
+//         }
+//     }
+// }
+
+// function test(first) {
+//   return function (second) {
+//     return function(third) {
+//       return first + second + third
+//     }
+//   }
+// }
+
+// function test(first) {
+//   let test = "hello"
+//   return function () {
+//     return function () {
+//       return test 
+//     }
+//   }
+// }
+
+
+// let firstCall = test(1)
+// let secondCall = firstCall(2)
+// let thirdCall = secondCall(3)
+
+// console.log(thirdCall)
