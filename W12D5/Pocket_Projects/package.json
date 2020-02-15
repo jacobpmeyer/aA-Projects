@@ -1,0 +1,11 @@
+{
+  "name": "pocket_projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --mode=development"
+  },
+  "author": "",
+  "license": "ISC"
+}
