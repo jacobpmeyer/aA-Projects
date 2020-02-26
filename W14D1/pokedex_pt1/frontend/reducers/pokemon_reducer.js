@@ -4,11 +4,16 @@ import {
 } from '../actions/pokemon_actions'
 
 const pokemonReducer = (state = {}, action) => {
+  Object.freeze(state)
+  let nextState = Object.assign({}, state)
   switch (action.type) {
+
     case RECEIVE_ALL_POKEMON:
-      return Object.assign({}, state, action.pokemon)
+      return Object.assign({}, action.pokemon)
     case RECEIVE_SINGLE_POKEMON: 
-      return Object.assign({}, state, { [action.pokemon.id]: action.pokemon} )
+      // nextState[action.pokemon.id] = action.pokemon
+      // return nextState
+      return Object.assign({}, state, action.pokemon.pokemon)
     default:
       return state
   }

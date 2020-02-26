@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { receiveAllPokemon, requestAllPokemon } from './actions/pokemon_actions'
+import { receiveSinglePokemon, requestSinglePokemon } from './actions/pokemon_actions'
 import { fetchAllPokemon } from './util/api_util'
 import configureStore from './store/store'
 import { selectAllPokemon } from './reducers/selectors'
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState
   window.dispatch = store.dispatch
 
-  // window.fetchAllPokemon = fetchAllPokemon
-  // window.receiveAllPokemon = receiveAllPokemon
-  // window.requestAllPokemon = requestAllPokemon
-  // window.selectAllPokemon = selectAllPokemon
+  window.fetchAllPokemon = fetchAllPokemon
+  window.receiveSinglePokemon = receiveSinglePokemon
+  window.requestSinglePokemon = requestSinglePokemon
+  window.selectAllPokemon = selectAllPokemon
 
   ReactDOM.render(<Root store={store} />, root)
 })
