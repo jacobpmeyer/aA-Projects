@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import React from 'react'
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -5,6 +8,7 @@ class SessionForm extends React.Component {
       username: "",
       password: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e) {
@@ -13,10 +17,30 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  handleUpdate(field) {
+    return (e) => this.setState({ [field]: e.target.value })
+  }
+
   render() {
+
+    let buttonName = ""
+    let otherType = ""
+    let linkName = ""
+    if (this.props.formType === "login") {
+      buttonName = "Log In!"
+      otherType = "signup"
+      linkName = "Sign Up!"
+    } else {
+      buttonName = "Sign Up!"
+      otherType = "login"
+      linkName = "Log In!"
+    }
 
     return (
       <div className="session-form">
+        {/* <ul>
+          {this.props.errors.map(error => <li>{error}</li>)}
+        </ul> */}
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="">Username:
             <input 
@@ -30,10 +54,13 @@ class SessionForm extends React.Component {
               value={this.state.password}
               onChange={this.handleUpdate("password")} />
           </label>
-          <button type={this.props.formType}></button>
+          <button type={this.props.formType}>{buttonName}</button>
         </form>
+        {/* <Link to={otherType} >{linkName}</Link> */}
       </div>
     )
   }
 
 }
+
+export default SessionForm

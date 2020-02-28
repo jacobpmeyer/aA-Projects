@@ -5,7 +5,7 @@ import { signupUser } from '../../actions/session_actions'
 
 const mapStateToProps = (state, ownProps) => ({
   errors: state.errors,
-  formType: "sign up"
+  formType: "signup"
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -9,7 +9,6 @@ const Root = ({ store }) => (
   <Provider store={store}>
     <HashRouter>
       <App />
-      <GreetingContainer />
     </HashRouter>
   </Provider>
 );

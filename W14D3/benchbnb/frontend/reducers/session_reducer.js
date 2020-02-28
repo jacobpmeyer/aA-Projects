@@ -8,11 +8,11 @@ const _defaultSession = {
 };
 
 export default (state = _defaultSession, action) => {
-    Object.freeze(state);
-
+    Object.freeze(action);
+    console.log(action)
     switch (action.type){
         case RECEIVE_CURRENT_USER:
-            return Object.assign( {}, { id: action.currentUser.id })
+            return {id: action.currentUser.id}
         case LOGOUT_CURRENT_USER:
             return _defaultSession;
         default:
