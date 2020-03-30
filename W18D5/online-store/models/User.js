@@ -22,8 +22,10 @@ UserSchema.statics.signUp = async function (email, password) {
   const User = mongoose.model("User");
 
   const user = new User({ email: email, password: hashedPassword });
+  await user.save()
   const token = jwt.sign({ _id: user._id }, secret);
   user.token = "Bearer " + token;
+  await user.save()
   return user;
 }
 

@@ -21,6 +21,7 @@ type Mutation {
 const otherResolvers = {
   Query: {
     categories(_, __, context) {
+      debugger
       console.log(context.user)
       return Category.find({})
     },
