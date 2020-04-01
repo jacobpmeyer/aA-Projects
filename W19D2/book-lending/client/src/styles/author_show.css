@@ -1,0 +1,25 @@
+.author-show-main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vw;
+  align-items: center;
+  background-color: #f1efea;
+  text-align: center;
+}
+
+.author-and-books h1{
+  font-size: 25px;
+  align-self: center;
+}
+
+.author-book-list {
+  list-style: none;
+  line-height: 2;
+  text-align: center;
+  padding-left: 0;
+}
+
+.fa-pen-fancy {
+  font-size: 12px;
+}

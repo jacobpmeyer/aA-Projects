@@ -1,0 +1,19 @@
+.err-page-main {
+  width: 100vw;
+  height: 100vh;
+  flex-grow: 1;
+  background-image: url('dog_ate_this_page.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 80% 80%;
+  justify-content: center;
+  text-align: center;
+}
+
+.err-page-content p {
+  font-size: 20px;
+}
+
+.err-page-content Link {
+  margin-top: 25px;
+}

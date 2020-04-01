@@ -1,0 +1,15 @@
+.book-index-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1efea;
+}
+
+.book-list-main {
+  list-style: none;
+  line-height: 2;
+}
+
+.fa-bookmark {
+  font-size: 10px;
+}

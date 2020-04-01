@@ -1,0 +1,30 @@
+.nav-bar-main {
+  padding-top: 10px;
+  display: flex;
+  background-color: #E27D60;
+  height: 70px;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  text-align: center;
+}
+
+.books-link {
+  width: 20%;
+}
+
+.authors-link {
+  width: 20%;
+}
+
+.nav-bar-main h2{
+width: 60%;
+}
+
+.fa-book {
+  font-size: 20px;
+}
+
+.fa-user-edit {
+  font-size: 20px;
+}
