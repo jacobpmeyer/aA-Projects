@@ -74,3 +74,17 @@ class MaxHeap {
 module.exports = {
   MaxHeap,
 };
+
+// var findKthLargest = function (nums, k) {
+//   let maxHeap = new MaxHeap();
+
+//   for (let i = 0; i < nums.length; i++) {
+//     maxHeap.insert(nums[i]);
+//   }
+
+//   for (let i = 1; i < k; i++) {
+//     maxHeap.deleteMax();
+//   }
+
+//   return maxHeap.array[1];
+// };
